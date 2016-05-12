@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Acronym View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AcronymViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Acronym..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BYb-u2-pXd">
+                                <rect key="frame" x="20" y="69" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="8mc-Nl-oqU"/>
+                                    <constraint firstAttribute="height" constant="30" id="DD7-0y-KLM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2u-GC-ZOe">
+                                <rect key="frame" x="20" y="107" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="8fb-B6-B0d"/>
+                                    <constraint firstAttribute="height" constant="30" id="Urf-6R-zdk"/>
+                                </constraints>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0f-KO-cvK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Acronym" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUy-YG-8J9">
+                                <rect key="frame" x="20" y="40" width="280" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="U4a-aw-VTa"/>
+                                    <constraint firstAttribute="width" constant="280" id="asO-0W-KCM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k3S-VD-KFo">
+                                <rect key="frame" x="20" y="168" width="280" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="FUv-rW-t0F"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="5Ea-Vc-xn1" style="IBUITableViewCellStyleDefault" id="AOA-dG-c4L">
+                                        <rect key="frame" x="0.0" y="28" width="280" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AOA-dG-c4L" id="qmq-Kz-Ppn">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Ea-Vc-xn1">
+                                                    <rect key="frame" x="15" y="0.0" width="250" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k3S-VD-KFo" secondAttribute="bottom" constant="25" id="6D1-z6-ob8"/>
+                            <constraint firstItem="i2u-GC-ZOe" firstAttribute="top" secondItem="BYb-u2-pXd" secondAttribute="bottom" constant="8" id="7Vd-YO-Sbn"/>
+                            <constraint firstItem="k3S-VD-KFo" firstAttribute="top" secondItem="i2u-GC-ZOe" secondAttribute="bottom" constant="31" id="IfG-Z3-POJ"/>
+                            <constraint firstItem="BYb-u2-pXd" firstAttribute="top" secondItem="vUy-YG-8J9" secondAttribute="bottom" constant="8" id="KYU-hn-AKe"/>
+                            <constraint firstItem="vUy-YG-8J9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="NSo-mT-qVg"/>
+                            <constraint firstAttribute="trailing" secondItem="i2u-GC-ZOe" secondAttribute="trailing" constant="20" id="QfM-rW-xrf"/>
+                            <constraint firstItem="BYb-u2-pXd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="a8t-bK-vUO"/>
+                            <constraint firstAttribute="trailing" secondItem="BYb-u2-pXd" secondAttribute="trailing" constant="20" id="dQD-wV-oYw"/>
+                            <constraint firstItem="k3S-VD-KFo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="hrx-Pe-DHf"/>
+                            <constraint firstAttribute="trailing" secondItem="k3S-VD-KFo" secondAttribute="trailing" constant="20" id="hvM-ng-UlY"/>
+                            <constraint firstItem="vUy-YG-8J9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="lBC-WI-SwL"/>
+                            <constraint firstAttribute="trailing" secondItem="vUy-YG-8J9" secondAttribute="trailing" constant="20" id="nld-RH-eQY"/>
+                            <constraint firstItem="i2u-GC-ZOe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="pxi-9n-iGb"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="acronymsTxtFld" destination="BYb-u2-pXd" id="5ne-Yr-3BP"/>
+                        <outlet property="tblView" destination="k3S-VD-KFo" id="dxg-Bw-7e7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="363" y="259"/>
+        </scene>
+    </scenes>
+</document>
